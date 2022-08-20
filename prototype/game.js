@@ -4,19 +4,12 @@
     const inningsWickets = 2;
     const bowlingDice = [1,2,3,4,6,'Owzthat'];
     const umpireDice = ['Bowled', 'Stumped', 'Caught', 'L.B.W.', 'Not out', 'No ball'];
-
-    const rollDice = (dice) => {
-        const index = Math.floor(Math.random() * dice.length);
-        return dice[index];
-    }
-
-    const bowl = () => {
-        return rollDice(bowlingDice);
-    }
-
-    const appealDecision = () => {
-        return rollDice(umpireDice);
-    }
+    
+    const rollDice = (dice) => dice[Math.floor(Math.random() * dice.length)];
+    
+    const bowl = () => rollDice(bowlingDice);
+    
+    const appealDecision = () => rollDice(umpireDice);
 
     let runs = 0;
     let wickets = 0;
